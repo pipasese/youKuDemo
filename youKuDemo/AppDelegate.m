@@ -7,12 +7,29 @@
 //
 
 #import "AppDelegate.h"
+#import "VICNetworkEngine.h"
+#import "YoukuUploader.h"
+#import "ASIHTTPRequest.h"
+#import "ASIFormDataRequest.h"
 
+//#import "YoukuUploaderConfig.h"
+#import "JSONKit.h"
 @implementation AppDelegate
+{
+    NSString *html2;
+    ASIFormDataRequest* http;
+}
+
+@synthesize html;
+
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    //注册
+    [[YoukuUploader sharedInstance]setClientID: client_id andClientSecret:client_secret];
+  
+    
     return YES;
 }
 							

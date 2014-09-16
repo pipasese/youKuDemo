@@ -10,4 +10,11 @@
 
 @interface ViewController : UIViewController
 
+//更新进度
+- (void) onProgressUpdate:(int)progress;
+//上传成功
+- (void) onSuccess:(NSString*)vid;
+//上传失败
+- (void) onFailure:(NSDictionary*)response;
+
 @end
